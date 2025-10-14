@@ -16,4 +16,4 @@ request_cpus           = 2
 request_disk           = 5 GB
 request_memory         = 10 GB
 
-queue reads_subset from testset_of_listOfReads.txt
+queue reads_subset from listofReads.txt
