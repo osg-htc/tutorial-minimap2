@@ -1,0 +1,19 @@
+container_image        = /ospool/guest-ap/data/jovyan/tutorial-minimap2/software/minimap2_08OCT2025_v1.sif
+
+executable             = run_minimap2.sh
+arguments              = M_novaeangliae_fasta.mmi $(subset)
+
+transfer_input_files   = /ospool/guest-ap/data/jovyan/tutorial-minimap2/inputs/M_novaeangliae_fasta.mmi, inputs/$(subset)
+
+transfer_output_files  = mapped_$(subset)_reads_to_genome_sam_sorted.bam
+transfer_output_remaps = "mapped_$(subset)_reads_to_genome_sam_sorted.bam = outputs/mapped_$(subset)_reads_to_genome_sam_sorted.bam"
+
+output                 = ./logs/$(Cluster)_$(Process)_$(subset)_mapping.out
+error                  = ./logs/$(Cluster)_$(Process)_$(subset)_mapping.err
+log                    = ./logs/$(Cluster)_mapping_step2.log
+
+request_cpus           = 2
+request_disk           = 5 GB
+request_memory         = 10 GB
+
+queue subset from testset_of_listOfReads.txt
