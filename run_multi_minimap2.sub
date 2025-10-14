@@ -4,6 +4,7 @@ executable             = run_minimap2.sh
 arguments              = M_novaeangliae_fasta.mmi $(reads_subset)
 
 transfer_input_files   = osdf:///ospool/uc-shared/public/osg-training/tutorial-minimap2/inputs/M_novaeangliae_fasta.mmi, inputs/$(reads_subset)
+should_transfer_files  = YES
 
 transfer_output_files  = mapped_$(reads_subset)_reads_to_genome_sam_sorted.bam
 transfer_output_remaps = "mapped_$(reads_subset)_reads_to_genome_sam_sorted.bam = outputs/mapped_$(reads_subset)_reads_to_genome_sam_sorted.bam"
