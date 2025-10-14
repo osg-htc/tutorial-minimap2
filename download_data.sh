@@ -17,5 +17,6 @@ echo "A pre-indexed reference genome is at /ospool/guest-ap/data/jovyan/tutorial
 echo ""
 
 osdf object get /ospool/uc-shared/public/osg-training/tutorial-minimap2/h_whale_sd_0001_sub.fastq.tar.gz?pack=tar.gz ./inputs/
+mv inputs/h_whale_sd_0001_sub.fastq inputs/m_novaeangliae.fastq
 echo "A copy of the WGS reads is at ./inputs/h_whale_sd_0001_sub.fastq"
 echo "Data download complete."
