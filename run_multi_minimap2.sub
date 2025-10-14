@@ -1,9 +1,9 @@
 container_image        = osdf:///ospool/uc-shared/public/osg-training/tutorial-minimap2/software/minimap2_08OCT2025_v1.sif
 
 executable             = run_minimap2.sh
-arguments              = M_novaeangliae_fasta.mmi $(reads_subset)
+arguments              = humpback_whale_ref_genome.fasta.mmi $(reads_subset)
 
-transfer_input_files   = osdf:///ospool/uc-shared/public/osg-training/tutorial-minimap2/inputs/M_novaeangliae_fasta.mmi, inputs/$(reads_subset)
+transfer_input_files   = osdf:///ospool/uc-shared/public/osg-training/tutorial-minimap2/inputs/humpback_whale_ref_genome.fasta.mmi, inputs/$(reads_subset)
 should_transfer_files  = YES
 
 transfer_output_files  = mapped_$(reads_subset)_reads_to_genome_sam_sorted.bam
