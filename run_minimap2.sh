@@ -8,9 +8,6 @@
 ref_genome=$1
 reads_file=$2
 
-echo $ref_genome
-echo $reads_file
-
 # Run minimap2 with ONT preset (-x map-ont)
 minimap2 -ax map-ont ${ref_genome} ${reads_file} > mapped_${reads_file}_reads_to_genome_sam
 echo "Minimap2 mapping complete. Output SAM file: mapped_${reads_file}_reads_to_genome_sam"
