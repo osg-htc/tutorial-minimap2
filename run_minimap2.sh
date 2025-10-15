@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Use minimap2 to map the basecalled reads to the reference genome
-# The command takes three arguments: reference genome, reads file, and output SAM file
-# Example usage: ./run_minimap2.sh <ref_genome> <reads.fastq> <output_sam_file>
+# The command takes two arguments: reference genome and reads file
+# Example usage: ./run_minimap2.sh <ref_genome> <reads.fastq>
 
 # Define arguments/variables
 ref_genome=$1
